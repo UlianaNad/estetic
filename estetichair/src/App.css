@@ -1,32 +1,47 @@
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top: 100px;
+}
 body{
-position: relative;
+  position: relative;
+  width: calc(100%/12*12);
+ 
 }
 header{
   background: url("./img/portrait.jpg") center no-repeat;
   background-size: auto;
   background-repeat: no-repeat;
   height: 500px;
-
+  width: calc(100%/12*12);
 }
 .background{
+  width: calc(100%/12*12);
   background-color: rgb(49,25,13, 0.7);
   height: 500px;
 }
 .container{
+  width: calc(100%/12*12);
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
+  position: relative;
 }
 .logo{
   width: 250px;
   height: 250px;
+  padding-top: 80px;
 }
 .dropdown-menu{
   text-transform: uppercase;
-  padding-top: 35px;
-  padding-right: 20px;
-  position: relative;
+  top: 0px;
+  right: 0px;
+  position: fixed;
   margin-left: 1rem;
+  background-color: rgba(49,25,13, 0.9);
+  padding: 24px;
+  width: 100%;
+  text-align: end;
+  z-index: 10;
 }
 a{
   text-decoration: none;
@@ -70,18 +85,17 @@ li:hover > .submenu{
 
 .topic{
   font-size: 40px;
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-top: 75px;
+  margin-top: 5px;
   background-color: rgb(226,214,214, 0.3);
   padding: 20px 5px;
 }
 h3, h5{
   padding: 0;
   margin: 0;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   padding: 0px 20px;
   color: RGB(49,25,13);
  
@@ -99,14 +113,16 @@ h3, h5{
   font-size: 20px;
   position: fixed;
   top: 170px;
-  right: -75px;
+  right: -77px;
   transform: rotate(90deg);
   z-index: 1;
 }
 main{
-  height: 500px;
+  height: auto;
+  width: calc(100%/12*12);
 }
 footer{
+  width: calc(100%/12*12);
   font-family:'Open Sans';
   background-color:#e2d6d6 ;
 }
@@ -135,11 +151,13 @@ span{
 
 
 .wrapper{
+  width: calc(100%/12*12);
   font-family: "Open Sans";
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 40px 0px;
 } 
 
 .photo-card1,.photo-card2, .photo-card3, .photo-card4 {
@@ -173,6 +191,8 @@ span{
   width: 20px;
   height: 20px;
   margin: 10px;
+}.crew-wrapper{
+  padding: 30px 0px;
 }
 .info-card{
   background-color: rgb(226, 214, 214, 0.8);
@@ -207,9 +227,12 @@ h6{
   margin-left: 10px;
 }
 .card-crew{
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
 }
 .wrapper h3{
   font-size: 25px;
@@ -220,4 +243,121 @@ h6{
   font-size: 20px;
   padding: 10px 0px;
 
+}
+
+.price-wrapper{
+  width: calc(100%/12*12);
+  font-family: "Open Sans";
+  color: rgb(49,25,13);
+  padding: 30px 0px;
+}
+.first-line{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.down_line{
+  height: 1px;
+  min-width: 150px;
+  background-color: rgb(104, 104, 104);
+}
+.expl{
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 15px;
+}
+.top-name, .price-amount{
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 20px;
+}
+.price-block{
+  padding: 10px;
+}
+.grid-price{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+.h3-price{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 30px;
+}
+.divider{
+  
+  height: 400px;
+  background: url("./img/green-leaf.jpg")center no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 25px;
+}
+.white-back{
+  background-color: rgb(255, 255, 255, 0.5);
+  font-family: "Open Sans";
+  border-radius: 5px;
+  width: calc(100%/12*6);
+  padding: 15px;
+
+}
+.whitebookbtn{
+  width: 200px;
+  height: 45px;
+  background-color:rgb(181,138,139) ;
+  color: rgba(240,234,234,255);
+  font-weight: 900;
+  border: solid rgba(240,234,234,255) 3px;
+  border-color: rgba(240,234,234,255);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 20px;
+}
+.story-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background: url("./img/beauty-portrait-smiling.jpg")center no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 30px;
+}
+.white-backgr{
+  background-color: rgba(226,214,214, 0.4);
+  border-radius: 5px;
+  padding: 20px;
+}
+.text-story{
+  font-size: 13px;
+  font-family: "Open Sans";
+}
+.price-link-block{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 80px;
+}
+.price-link-block a{
+  width: calc(100%/12*2);
+  margin: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px ;
+  border: 1px solid;
+  box-shadow: 1px 1px 2px 2px rgba(181,138,139, 0.4);
+}
+.price-link-block a:hover{
+  box-shadow: 2px 2px 2px 2px rgba(162,111,111, 0.6);
+}
+.icon-price{
+  width: 70px;
+}
+.price-link-block h5{
+  color: rgba(49,25,13,255);
+  font-size: 13px;
 }
